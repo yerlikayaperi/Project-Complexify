@@ -7,13 +7,14 @@ Coordination Complex Database
 <br>
 
 
-Code for a streamlet page created for users wishing to navigate databases tmqm, tmQmg and tmQmg-L more easily.
+Code for a streamlit page created for users wishing to navigate databases tmqm, tmQmg and tmQmg-L more easily.
 
 ## 🔥 Usage
 
 > Provides the metal, molar mass, stoechiometry, number of electrons, charge and ligands of over 60 000 coordination complexes ! 
 > Also gives over 30 000 ligands' SMILES, stoechiometry, charge, number of atoms and complexes they can be found in !
-> All complexes and ligands are shown in 3D with the help of py3Dmol. 
+> All complexes and ligands are shown in 3D with the help of py3Dmol.
+
 
 ## 👩‍💻 Installation
 
@@ -32,6 +33,17 @@ If you need jupyter lab, install it
 ```
 (ccdata) $ pip install jupyterlab
 ```
+
+## Pre-required modules
+
+For this project to work, the following extensions must be downloaded:
+  - streamlit
+  - rdkit
+  - py3Dmol
+  - numpy
+  - pandas
+  - stmol
+  - matplotlib
 
 
 ## 🛠️ Development installation
