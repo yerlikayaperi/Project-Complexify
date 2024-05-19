@@ -3,16 +3,17 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [project]
-name = "ch200"
+name = "ccdata"
 readme = "README.md"
 requires-python = ">=3.10"
 license = {file = "LICENSE"}
-description = "Just a short project test"
+description = "streamlit page to navigate a coordination complex database"
 dependencies = [
     # "rdkit",
 ]
 authors = [
-    {name = "Philippe Schwaller", email = "philippe.schwaller@epfl.ch"}
+    {name = "Peri Yerlikaya", email = "peri.yerlikaya@epfl.ch"},
+    {name = "Shahina Chopra", email = "shahina.chopra@epfl.ch"}
 ]
 classifiers = [
     "Development Status :: 3 - Alpha",
@@ -29,8 +30,8 @@ classifiers = [
 dynamic = ["version"]
 
 [project.urls]
-source = "https://github.com/pschwllr/ch200"
-tracker = "https://github.com/pschwllr/ch200/issues"
+source = "https://github.com/yerlikayaperi/PPC-Project"
+tracker = "https://github.com/yerlikayaperi/PPC-Project/issues"
 
 [project.optional-dependencies]
 test = [
@@ -48,7 +49,7 @@ doc = [
 ]
 
 [tool.hatch.version]
-path = "src/ch200/__init__.py"
+path = "src/ccdata/__init__.py"
 
 [tool.pytest.ini_options]
 testpaths = [
