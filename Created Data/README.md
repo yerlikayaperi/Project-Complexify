@@ -12,3 +12,5 @@ The last column conatins the complex in which they appear and their number of ap
 Coordinates_info.csv : this table displays the ligands appearing in each complex alongside their subgraphs.
 For each subgraph, the following file must be downloaded to obtain the coordinates of the atoms composing the studied subgraph :
 https://github.com/hkneiding/tmQMg-L/blob/main/xyz/ligands_xyzs.xyz
+
+tmQMg_xyz : this file contains separate xyz info for complexes in the database. It should be downloaded prior to running the application via this link: https://github.com/hkneiding/tmQMg/blob/main/data/tmQMg_xyz.zip
