@@ -1,3 +1,5 @@
+![Project Logo](assets/readmebanner.jpg)
+
 ![Coverage Status](https://raw.githubusercontent.com/pschwllr/minimal_project/main/assets/coverage-badge.svg)
 
 <h1 align="center">
