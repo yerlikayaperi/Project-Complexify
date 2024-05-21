@@ -5,6 +5,15 @@ setup(
     version = "1.0.0",
     author = "Peri Yerlikaya, Shahina Chopra",
     author_email = "peri.yerlikaya@epfl.ch, shahina.chopra@epfl.ch",
+    install_requires=[
+     "rdkit",
+     "streamlit",
+     "py3Dmol",
+     "numpy",
+     "pandas",
+     "stmol",
+     "matplotlib"
+]
     description = "streamlit page to navigate a coordination complex database",
     url = 'https://github.com/yerlikayaperi/Project_Complexify',
     packages =find_packages(),
@@ -22,5 +31,5 @@ setup(
     ],
     python_require= '>=3.6',
     license= "MIT",
-    },
+    
 )
