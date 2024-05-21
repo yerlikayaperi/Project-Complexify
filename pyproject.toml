@@ -9,7 +9,13 @@ requires-python = ">=3.10"
 license = {file = "LICENSE"}
 description = "streamlit page to navigate a coordination complex database"
 dependencies = [
-    # "rdkit",
+     "rdkit",
+     "streamlit",
+     "py3Dmol",
+     "numpy",
+     "pandas",
+     "stmol",
+     "matplotlib"
 ]
 authors = [
     {name = "Peri Yerlikaya", email = "peri.yerlikaya@epfl.ch"},
