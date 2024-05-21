@@ -6,7 +6,7 @@ setup(
     author = "Peri Yerlikaya, Shahina Chopra",
     author_email = "peri.yerlikaya@epfl.ch, shahina.chopra@epfl.ch",
     description = "streamlit page to navigate a coordination complex database",
-    url = 'https://github.com/yerlikayaperi/Complexify',
+    url = 'https://github.com/yerlikayaperi/Porject_Complexify',
     packages =find_packages(),
     classifiers = [
         "Development Status :: 3 - Alpha",
