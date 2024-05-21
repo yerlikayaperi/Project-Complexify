@@ -1,5 +1,11 @@
 from setuptools import setup , find_packages
 
+with open("README.md", "r", encoding="utf-8") as fh:
+    long_description = fh.read()
+
+with open("LICENSE", "r", encoding="utf-8") as fh:
+    license_text = fh.read()
+
 setup(
     name = "complexify",
     version = "1.0.0",
@@ -22,4 +28,8 @@ setup(
     ],
     python_require= '>=3.6',
     license= "MIT",
-    )
+    include_package_data=True,     # Include package data
+    package_data={
+        '': ['LICENSE'],  # Include LICENSE file
+    },
+)
