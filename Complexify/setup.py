@@ -21,4 +21,5 @@ setup(
         "Programming Language :: Python :: 3.11",
     ],
     python_require= '>=3.6',
+    license= "MIT",
     )
