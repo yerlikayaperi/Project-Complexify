@@ -42,8 +42,8 @@ packages = [
 
 
 [project.urls]
-source = "https://github.com/yerlikayaperi/Complexify"
-tracker = "https://github.com/yerlikayaperi/COmplexify/issues"
+source = "https://github.com/yerlikayaperi/Project_Complexify"
+tracker = "https://github.com/yerlikayaperi/Project_Complexify/issues"
 
 [project.optional-dependencies]
 test = [
