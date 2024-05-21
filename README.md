@@ -36,7 +36,7 @@ If you need jupyter lab, install it
 
 ## Pre-required modules
 
-For this project to work, the following extensions must be downloaded:
+For this project to work, the following extensions are automatically downloaded during the pip install:
   - streamlit
   - rdkit
   - py3Dmol
@@ -50,25 +50,33 @@ For this project to work, the following extensions must be downloaded:
 
 Initialize Git (only for the first time). 
 
-Note: You should have create an empty repository on `https://github.com:pschwllr/ch200`.
-
 ```
 git init
 git add * 
 git add .*
 git commit -m "Initial commit" 
 git branch -M main
-git remote add origin git@github.com:yerlikayaperi/Complexify.git 
+git remote add origin git@github.com:yerlikayaperi/Project_Complexify.git 
 git push -u origin main
 ```
 
 Then add and commit changes as usual. 
 
-To install the package, run
+🔺  **Before installing the package, please download in the Created Data file of the repository the following two files:** 🔺
+- **ligands_xyzs.xyz** : https://github.com/hkneiding/tmQMg-L/blob/main/xyz/ligands_xyzs.xyz
+- **tmQMg_xyz.zip** : https://github.com/hkneiding/tmQMg/blob/main/data/tmQMg_xyz.zip which should be extracted in a file named tmQMg_xyz in the Created Data file
+
+To install the package, run in the repository 
 
 ```
-(complexify) $ pip install -e ".[test,doc]"
+(complexify) $ cd Complexify
+(complexify) $ python setup.py sdist bdist_wheel
+(complexify) $ cd dist
+(complexify) $ pip install complexify-1.0.0.tar.gz
+(complexify) $ streamlit run complexify_app.py  
 ```
+
+The last line will launch the application in your browser.
 
 ### Run tests and coverage
 
