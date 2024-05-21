@@ -13,7 +13,7 @@ setup(
      "pandas",
      "stmol",
      "matplotlib"
-]
+],
     description = "streamlit page to navigate a coordination complex database",
     url = 'https://github.com/yerlikayaperi/Project_Complexify',
     packages =find_packages(),
