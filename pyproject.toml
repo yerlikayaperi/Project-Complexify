@@ -3,7 +3,7 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [project]
-name = "ccdata"
+name = "complexify"
 readme = "README.md"
 requires-python = ">=3.10"
 license = {file = "LICENSE"}
@@ -35,9 +35,15 @@ classifiers = [
 ]
 dynamic = ["version"]
 
+[tool.poetry]
+packages = [
+{include = 'module_3D.py', from='.'}
+]
+
+
 [project.urls]
-source = "https://github.com/yerlikayaperi/PPC-Project"
-tracker = "https://github.com/yerlikayaperi/PPC-Project/issues"
+source = "https://github.com/yerlikayaperi/Complexify"
+tracker = "https://github.com/yerlikayaperi/COmplexify/issues"
 
 [project.optional-dependencies]
 test = [
