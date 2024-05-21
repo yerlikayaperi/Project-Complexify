@@ -25,13 +25,13 @@ conda create -n ccdata python=3.10
 ```
 
 ```
-conda activate ccdata
+conda activate complexify
 ```
 
 If you need jupyter lab, install it 
 
 ```
-(ccdata) $ pip install jupyterlab
+(complexify) $ pip install jupyterlab
 ```
 
 ## Pre-required modules
@@ -58,7 +58,7 @@ git add *
 git add .*
 git commit -m "Initial commit" 
 git branch -M main
-git remote add origin git@github.com:pschwllr/ch200.git 
+git remote add origin git@github.com:yerlikayaperi/Complexify.git 
 git push -u origin main
 ```
 
@@ -67,7 +67,7 @@ Then add and commit changes as usual.
 To install the package, run
 
 ```
-(ch200) $ pip install -e ".[test,doc]"
+(complexify) $ pip install -e ".[test,doc]"
 ```
 
 ### Run tests and coverage
