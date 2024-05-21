@@ -73,10 +73,11 @@ To install the package, run in the repository
 (complexify) $ python setup.py sdist bdist_wheel
 (complexify) $ cd dist
 (complexify) $ pip install complexify-1.0.0.tar.gz
+(complexify) $ cd ..
 (complexify) $ streamlit run complexify_app.py  
 ```
 
-The last line will launch the application in your browser.
+The last two lines will launch the application in your browser.
 
 ### Run tests and coverage
 
