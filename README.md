@@ -63,6 +63,8 @@ git clone https://github.com/yerlikayaperi/Project-Complexify
 - **ligands_xyzs.xyz** : https://github.com/hkneiding/tmQMg-L/blob/main/xyz/ligands_xyzs.xyz
 - **tmQMg_xyz.zip** : https://github.com/hkneiding/tmQMg/blob/main/data/tmQMg_xyz.zip which should be extracted (dezipped) in a file named tmQMg_xyz in the Created Data file
 
+While it is possible to download them directly from your terminal with commands such as ``wget`` or ``curl``, it is recommended to do it from your browser as they are extremely voluminous datasets.
+
 To install the package, assuming you are in the path leading to the Project-Complexify folder downloaded on your device, run the following lines. It is recommended to do this in the previously created conda environment (complexify). 
 ```
 conda activate complexify
