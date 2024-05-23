@@ -23,7 +23,7 @@ Code for a streamlit page created for users wishing to navigate databases tmqm, 
 Create a new environment, you may also give the environment a different name. 
 
 ```
-conda create -n ccdata python=3.10 
+conda create -n complexify python=3.10 
 ```
 
 ```
