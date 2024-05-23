@@ -38,7 +38,8 @@ If you need jupyter lab, install it
 
 ## Pre-required modules
 
-For this project to work, the following extensions are automatically downloaded during the pip install:
+For this project to work, the following extensions are required:
+
   - streamlit
   - rdkit
   - py3Dmol
@@ -47,56 +48,51 @@ For this project to work, the following extensions are automatically downloaded 
   - stmol
   - matplotlib
 
+Not to worry, pip installing the project automatically downloads all these extensions. 
+
 
 ## 🛠️ Development installation
 
-Initialize Git (only for the first time). 
+Assuming git is initalized, run this line in your terminal to download the repository. 
 
 ```
-git init
-git add * 
-git add .*
-git commit -m "Initial commit" 
-git branch -M main
-git remote add origin git@github.com:yerlikayaperi/Project_Complexify.git 
-git push -u origin main
+git clone https://github.com/yerlikayaperi/Project-Complexify
 ```
-
-Then add and commit changes as usual. 
 
 🔺  **Before installing the package, please download in the Created Data file of the repository the following two files:** 🔺
 - **ligands_xyzs.xyz** : https://github.com/hkneiding/tmQMg-L/blob/main/xyz/ligands_xyzs.xyz
 - **tmQMg_xyz.zip** : https://github.com/hkneiding/tmQMg/blob/main/data/tmQMg_xyz.zip which should be extracted (dezipped) in a file named tmQMg_xyz in the Created Data file
 
-To install the package, run in the repository 
-
+To install the package, assuming you are in the path leading to the Project-Complexify folder downloaded on your device, run the following lines. It is recommended to do this in the previously created conda environment (complexify). 
 ```
-(complexify) $ cd Complexify-project-main
-(complexify) $ cd Complexify
-(complexify) $ python setup.py sdist bdist_wheel
-(complexify) $ cd dist
-(complexify) $ pip install complexify-1.0.0.tar.gz
-(complexify) $ cd ..
-(complexify) $ streamlit run complexify_app.py  
-```
-
-The last two lines will launch the application in your browser.
-
-### Run tests and coverage
-
-```
-(conda_env) $ pip install tox
-(conda_env) $ tox
+conda activate complexify
+cd Complexify
+python setup.py sdist bdist_wheel
+cd dist
+pip install complexify-1.0.0.tar.gz
+cd ..
+streamlit run complexify_app.py  
 ```
 
-### Generate coverage badge
-
-Works after running `tox`
+The last two lines will launch the application in your browser. They will not work if JavaScript is not activated in your browser. Your terminal should show something like this:
 
 ```
-(conda_env) $ pip install "genbadge[coverage]"
-(conda_env) $ genbadge coverage -i coverage.xml
+You can now view your Streamlit app in your browser.
+
+  Local URL: http://localhost:8501
+  Network URL: http://128.179.129.165:8501
 ```
+These URLs are just examples, streamlit will generate a new one for each session. If you accidentally close the automatically opened browser window with the application, just copy pasting and going to the Network URL will bring you back to your session ! Each session is terminated when you close the terminal on which you opened it.
+
+We hope you will enjoy this application and that it can be useful to you 🙂 
+
+
+
+
+
+
+
+
 
 Generated with some inspiration from [cookiecutter-snekpack](https://github.com/cthoyt/cookiecutter-snekpack) and [copier-pylib](https://github.com/astrojuanlu/copier-pylib).
 
