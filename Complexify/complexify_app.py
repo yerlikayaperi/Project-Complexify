@@ -9,6 +9,7 @@ from rdkit import Chem
 from rdkit.Chem import AllChem
 import base64
 import ast
+from module_3D import display_molecule_from_xyz, smi2conf, MolTo3DView
 
 #Path to Complex_info.csv
 path_1 = "../Created Data/Complex_info.csv"
@@ -38,32 +39,11 @@ chemin_fichier = "../Created Data/ligands_xyzs.xyz"
 nombre_aleatoire = random.randint(0,60800)
 print(nombre_aleatoire)
 
-# This function displays a rotating complex in 3D 
-def display_molecule_from_xyz(xyz_file):
-    with open(xyz_file, 'r') as f:
-        coordinates=''
-        lines=f.readlines()
-        for line in lines:
-                coordinates= coordinates + str(line)
-        viewer=py3Dmol.view(width=1000,height=500)
-        #viewer.setViewStyle({"style": "outline", "width": 0.01})
-        viewer.addModel(coordinates)
-        # visualize with the sticks and spheres
-        viewer.setStyle({"stick":{},"sphere": {"scale":0.25}})
-        #viewer.animate()
-        viewer.zoomTo()
-        viewer.spin()
-        showmol(viewer, height = 500,width=1000)
-
 
 # Display the random complex name at the top of the rotating complex 
 complex_ID = df_ligands1.iloc[nombre_aleatoire,2]
 st.header(complex_ID)
-
-
-#ATTENTION AU NOM DU PATH !!!!! c'est le dossier tmQMg_xyz.zip extrait
-
-
+#display the rotating complex
 display_molecule_from_xyz(rf"..\Created Data\tmQMg_xyz\{complex_ID}.xyz")
 
 
@@ -226,44 +206,15 @@ if user_2 != '':
 
     ###5 : Display the complexes in which the ligand (user_2) appear
     if ligne3[0].button("COMPLEXES", type="secondary"):
-        ligne3[0].write(df_ligands2.iloc[index, 7])
+        data=[(key,value) for key, value in eval(df_ligands2.iloc[index, 7]).items()]
+        table=pd.DataFrame(data, columns=['Complexes', 'Number of occurances'])
+        #ligne3[0].write(df_ligands2.iloc[index, 7])
+        st.write(f'{user_2} appears in {len(table)} complexes !')
+        st.table(table.head(10))
+        with st.expander('View more'):
+            st.table(table[10:])
 
     ### Display the ligand (user_2) in 3D
-    def smi2conf(smiles):
-        '''Convert SMILES to rdkit.Mol with 3D coordinates'''
-        mol = Chem.MolFromSmiles(smiles)
-        if mol is not None:
-            mol = Chem.AddHs(mol)
-            AllChem.EmbedMolecule(mol)
-            AllChem.MMFFOptimizeMolecule(mol, maxIters=200)
-            return mol
-        else:
-            return None
-    def MolTo3DView(mol, size=(300, 300), style="stick", surface=False, opacity=0.5):
-        """Draw molecule in 3D
-    
-    Args:
-    ----
-        mol: rdMol, molecule to show
-        size: tuple(int, int), canvas size
-        style: str, type of drawing molecule
-               style can be 'line', 'stick', 'sphere', 'carton'
-        surface, bool, display SAS
-        opacity, float, opacity of surface, range 0.0-1.0
-    Return:
-    ----
-        viewer: py3Dmol.view, a class for constructing embedded 3Dmol.js views in ipython notebooks.
-    """
-        assert style in ('line', 'stick', 'sphere', 'cartoon')
-        mblock = Chem.MolToMolBlock(mol)
-        viewer = py3Dmol.view(width=size[0], height=size[1])
-        viewer.addModel(mblock, 'mol')
-        viewer.setStyle({"stick":{},"sphere": {"scale":0.25}})
-        if surface:
-            viewer.addSurface(py3Dmol.SAS, {'opacity': opacity})
-        viewer.zoomTo()
-        viewer.spin()
-        return viewer
     ligand = MolTo3DView(smi2conf(df_ligands2.iloc[index, 3]), size=(600, 300))
     showmol(ligand)
 
