@@ -66,11 +66,12 @@ Then add and commit changes as usual.
 
 🔺  **Before installing the package, please download in the Created Data file of the repository the following two files:** 🔺
 - **ligands_xyzs.xyz** : https://github.com/hkneiding/tmQMg-L/blob/main/xyz/ligands_xyzs.xyz
-- **tmQMg_xyz.zip** : https://github.com/hkneiding/tmQMg/blob/main/data/tmQMg_xyz.zip which should be extracted in a file named tmQMg_xyz in the Created Data file
+- **tmQMg_xyz.zip** : https://github.com/hkneiding/tmQMg/blob/main/data/tmQMg_xyz.zip which should be extracted (dezipped) in a file named tmQMg_xyz in the Created Data file
 
 To install the package, run in the repository 
 
 ```
+(complexify) $ cd Complexify-project-main
 (complexify) $ cd Complexify
 (complexify) $ python setup.py sdist bdist_wheel
 (complexify) $ cd dist
