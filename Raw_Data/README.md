@@ -14,3 +14,6 @@ Detailed descriptions of these datasets are provided in the respective repositor
 - tmQM_X2.xyz.gz: URL https://github.com/bbskjelstad/tmqm/blob/master/data/tmQM_X2.xyz.gz
 
 Other files from these repositories are also used, but they are either present in the Created Data file or given instruction to be downloaded for the application.
+
+
+🔴 **All these files were used in the context of a non-commercial academical project. All the employed data is licensed under CC BY-NC 4.0. http://creativecommons.org/licenses/by-nc/4.0/** 🔴
