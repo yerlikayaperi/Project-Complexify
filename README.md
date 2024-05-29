@@ -61,7 +61,7 @@ git clone https://github.com/yerlikayaperi/Project-Complexify
 
 🔺  **Before installing the package, please download in the Created Data file of the repository the following two files:** 🔺
 - **ligands_xyzs.xyz** : https://github.com/hkneiding/tmQMg-L/blob/main/xyz/ligands_xyzs.xyz
-- **tmQMg_xyz.zip** : https://github.com/hkneiding/tmQMg/blob/main/data/tmQMg_xyz.zip which should be extracted (dezipped) in a file named tmQMg_xyz in the Created Data file
+- **tmQMg_xyz.zip** : https://github.com/hkneiding/tmQMg/blob/main/data/tmQMg_xyz.zip which should be extracted (dezipped)
 
 While it is possible to download them directly from your terminal with commands such as ``wget`` or ``curl``, it is recommended to do it from your browser as they are extremely voluminous datasets.
 
